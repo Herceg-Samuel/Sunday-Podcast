@@ -32,6 +32,7 @@ export default function Hero() {
           alt="Podcast Host"
           height={1080}
           width={1080}
+          loading="eager"
           className="w-full h-full object-cover grayscale-20 brightness-75"
         />
         <div className="absolute inset-0 bg-linear-to-r from-brand-navy via-brand-navy/60 to-transparent" />
