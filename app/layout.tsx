@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Archivo_Black, Fraunces, Syne, Inter } from "next/font/google";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const archivo = Archivo_Black({
   weight: "400",
@@ -42,7 +44,9 @@ export default function RootLayout({
       className={`${archivo.variable} ${fraunces.variable} ${syne.variable} ${inter.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-brand-navy text-text-secondary">
+        <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
