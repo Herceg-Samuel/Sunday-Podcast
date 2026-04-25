@@ -1,13 +1,14 @@
 "use client";
 
-import React, { useState } from "react";
+import { useState } from "react";
 import { Menu, X, Play, Mic2, Search } from "lucide-react";
 
 const navLinks = [
-  { name: "Episodes", href: "#" },
-  { name: "About", href: "#" },
-  { name: "Community", href: "#" },
-  { name: "Support", href: "#" },
+  { name: "Home", href: "/" },
+  { name: "Episodes", href: "/Episodes" },
+  { name: "About", href: "/About" },
+  { name: "Tribe", href: "/Tribe" },
+  { name: "Contact", href: "/Contact" },
 ];
 
 export default function Navbar() {
