@@ -1,9 +1,9 @@
-import EpisodeCard from "@/components/EpisodeCard";
+import EpisodesPage from "@/components/EpisodePage";
 
 const page = () => {
   return (
     <>
-      <EpisodeCard />
+      <EpisodesPage />
     </>
   );
 };
