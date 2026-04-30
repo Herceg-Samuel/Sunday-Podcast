@@ -1,7 +1,9 @@
+import Tribe from "@/components/Tribe";
+
 const page = () => {
   return (
     <>
-      <h1>Join the Tribe</h1>
+      <Tribe />
     </>
   );
 };
