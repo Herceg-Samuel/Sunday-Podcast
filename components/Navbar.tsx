@@ -8,7 +8,6 @@ const navLinks = [
   { name: "Episodes", href: "/Episodes" },
   { name: "About", href: "/About" },
   { name: "Tribe", href: "/Tribe" },
-  { name: "Contact", href: "/Contact" },
 ];
 
 export default function Navbar() {
