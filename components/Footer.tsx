@@ -1,15 +1,15 @@
-import { Mic2, Send, Heart } from "lucide-react";
+import Link from "next/link";
+import Image from "next/image";
+import { Mic2, Heart } from "lucide-react";
 
 const footerLinks = {
   Show: [
     { name: "Episodes", href: "#" },
     { name: "Guests", href: "#" },
     { name: "Series", href: "#" },
-    { name: "Live Stream", href: "#" },
   ],
   Community: [
     { name: "Events", href: "#" },
-    { name: "Discord", href: "#" },
     { name: "Newsletter", href: "#" },
     { name: "Merch", href: "#" },
   ],
@@ -25,6 +25,7 @@ export default function Footer() {
     <footer className="bg-navy pt-24 pb-12 px-6 border-t border-white/5">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+          {/* Brand Column */}
           <div className="space-y-6">
             <div className="flex items-center gap-2">
               <div className="bg-pink p-1.5 rounded-lg">
@@ -35,31 +36,55 @@ export default function Footer() {
               </span>
             </div>
             <p className="font-editorial text-muted italic text-lg leading-relaxed">
-              Christianity for the young generation. No rigidity, just honest
+              Faith remixed for the modern soul. No rigidity, just honest
               conversations.
             </p>
+
+            {/* Updated Social Section */}
             <div className="flex gap-4">
-              <a
-                href="#"
-                className="p-2 bg-steel rounded-full text-pink hover:bg-mint hover:text-navy transition-all duration-300"
+              <Link
+                href="https://open.spotify.com/show/4Qsn1AA1gmHGgbJjQR3vun?si=60d890b991ee4acf"
+                target="_blank"
+                className="p-2 bg-pink rounded-full hover:bg-mint transition-all duration-300 group"
               >
-                <Mic2 size={18} />
-              </a>
-              <a
-                href="#"
-                className="p-2 bg-steel rounded-full text-pink hover:bg-mint hover:text-navy transition-all duration-300"
+                <Image
+                  src="/spotify.png"
+                  alt="Spotify"
+                  width={18}
+                  height={18}
+                  className="opacity-80 group-hover:opacity-100 group-hover:brightness-0 transition-all"
+                />
+              </Link>
+              <Link
+                href="https://www.youtube.com/@Sundaypodcast-k1s"
+                target="_blank"
+                className="p-2 bg-pink rounded-full hover:bg-mint transition-all duration-300 group"
               >
-                <Mic2 size={18} />
-              </a>
-              <a
-                href="#"
-                className="p-2 bg-steel rounded-full text-pink hover:bg-mint hover:text-navy transition-all duration-300"
+                <Image
+                  src="/youtube.png"
+                  alt="YouTube"
+                  width={18}
+                  height={18}
+                  className="opacity-80 group-hover:opacity-100 group-hover:brightness-0 transition-all"
+                />
+              </Link>
+              <Link
+                href="https://www.instagram.com/s.u.n.d.a.y_podcast"
+                target="_blank"
+                className="p-2 bg-pink rounded-full hover:bg-mint transition-all duration-300 group"
               >
-                <Mic2 size={18} />
-              </a>
+                <Image
+                  src="/instagram.png"
+                  alt="Instagram"
+                  width={18}
+                  height={18}
+                  className="opacity-80 group-hover:opacity-100 group-hover:brightness-0 transition-all"
+                />
+              </Link>
             </div>
           </div>
 
+          {/* Links Columns */}
           {Object.entries(footerLinks).map(([category, links]) => (
             <div key={category} className="space-y-6">
               <h4 className="font-modern text-xs font-bold uppercase tracking-widest text-white">
@@ -68,19 +93,20 @@ export default function Footer() {
               <ul className="space-y-4">
                 {links.map((link) => (
                   <li key={link.name}>
-                    <a
+                    <Link
                       href={link.href}
                       className="text-muted hover:text-pink transition-colors duration-300 font-sans"
                     >
                       {link.name}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
             </div>
           ))}
 
-          <div className="space-y-6">
+          {/* Newsletter Column */}
+          {/* <div className="space-y-6">
             <h4 className="font-modern text-xs font-bold uppercase tracking-widest text-white">
               Stay in the Loop
             </h4>
@@ -97,7 +123,7 @@ export default function Footer() {
                 <Send size={18} />
               </button>
             </div>
-          </div>
+          </div> */}
         </div>
 
         {/* Bottom Bar */}

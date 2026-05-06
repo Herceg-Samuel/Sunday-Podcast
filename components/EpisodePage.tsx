@@ -2,7 +2,7 @@ import { videos } from "@/data/videos";
 
 export default function EpisodesPage() {
   return (
-    <section className="w-full bg-white dark:bg-navy border-b-2 border-navy dark:border-white min-h-screen pt-24">
+    <section className="w-full bg-white dark:bg-navy border-b-2 border-navy dark:border-white min-h-screen ">
       <div className="p-8 md:p-16 border-b-2 border-navy dark:border-white bg-white dark:bg-navy">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
           <div>
