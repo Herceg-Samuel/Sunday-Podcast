@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Menu, X, Play, Mic2, Search } from "lucide-react";
+import { Menu, X, Play, Mic2 } from "lucide-react";
 
 const navLinks = [
   { name: "Episodes", href: "/Episodes" },

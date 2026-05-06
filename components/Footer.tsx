@@ -1,6 +1,6 @@
 import Link from "next/link";
-import Image from "next/image";
 import { Mic2, Heart } from "lucide-react";
+import { InstagramIcon, SpotifyIcon, YoutubeIcon } from "./Tribe";
 
 const footerLinks = {
   Show: [
@@ -47,39 +47,28 @@ export default function Footer() {
                 target="_blank"
                 className="p-2 bg-pink rounded-full hover:bg-mint transition-all duration-300 group"
               >
-                <Image
-                  src="/spotify.png"
-                  alt="Spotify"
-                  width={18}
-                  height={18}
-                  className="opacity-80 group-hover:opacity-100 group-hover:brightness-0 transition-all"
-                />
+                <div className="opacity-80 group-hover:opacity-100 group-hover:brightness-0 transition-all">
+                  <SpotifyIcon />
+                </div>
               </Link>
               <Link
                 href="https://www.youtube.com/@Sundaypodcast-k1s"
                 target="_blank"
                 className="p-2 bg-pink rounded-full hover:bg-mint transition-all duration-300 group"
               >
-                <Image
-                  src="/youtube.png"
-                  alt="YouTube"
-                  width={18}
-                  height={18}
-                  className="opacity-80 group-hover:opacity-100 group-hover:brightness-0 transition-all"
-                />
+                <div className="opacity-80 group-hover:opacity-100 group-hover:brightness-0 transition-all">
+                  <YoutubeIcon />
+                </div>
               </Link>
+
               <Link
                 href="https://www.instagram.com/s.u.n.d.a.y_podcast"
                 target="_blank"
                 className="p-2 bg-pink rounded-full hover:bg-mint transition-all duration-300 group"
               >
-                <Image
-                  src="/instagram.png"
-                  alt="Instagram"
-                  width={18}
-                  height={18}
-                  className="opacity-80 group-hover:opacity-100 group-hover:brightness-0 transition-all"
-                />
+                <div className="opacity-80 group-hover:opacity-100 group-hover:brightness-0 transition-all">
+                  <InstagramIcon />
+                </div>
               </Link>
             </div>
           </div>
