@@ -22,7 +22,7 @@ import Link from "next/link";
 //   },
 // ];
 
-const InstagramIcon = () => (
+export const InstagramIcon = () => (
   <svg
     width="24"
     height="24"
@@ -39,7 +39,7 @@ const InstagramIcon = () => (
   </svg>
 );
 
-const YoutubeIcon = () => (
+export const YoutubeIcon = () => (
   <svg
     width="24"
     height="24"
@@ -55,6 +55,24 @@ const YoutubeIcon = () => (
   </svg>
 );
 
+export const SpotifyIcon = () => (
+  <svg
+    width="20"
+    height="20"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.5"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <circle cx="12" cy="12" r="10" />
+    <path d="M8 14.5c2.5-1 5.5-1 8 0" />
+    <path d="M7 11.5c3.5-1.5 7-1.5 10.5 0" />
+    <path d="M6 8.5c4-2 9-2 13 0" />
+  </svg>
+);
+
 export default function Tribe() {
   return (
     <section className="w-full bg-navy border-b-2 border-white overflow-hidden">
@@ -65,7 +83,7 @@ export default function Tribe() {
               Join the Movement
             </span>
           </div>
-          <h2 className="text-7xl font-heading uppercase tracking-tighter leading-[0.8] mb-12">
+          <h2 className="text-8xl font-heading uppercase tracking-tighter leading-[0.8] mb-12">
             THE <br />
             <span className="text-pink">TRIBE.</span>
           </h2>
@@ -84,29 +102,31 @@ export default function Tribe() {
               listen. It is a <br />
               belonging.
             </h3>
-            <div className="flex gap-4">
-              <button className="bg-pink text-navy px-10 py-2 rounded-full font-modern text-[10px] font-black uppercase tracking-widest hover:bg-mint transition-all duration-300 flex items-center gap-3 whitespace-nowrap group">
-                <Link
-                  href="https://www.youtube.com/@Sundaypodcast-k1s"
-                  target="_blank"
-                >
-                  Subscribe on YT
-                  <div className="group-hover:scale-110 transition-transform">
-                    <YoutubeIcon />
-                  </div>
-                </Link>
-              </button>
-              <button className="border-2  border-white/20 text-white px-10 py-4 rounded-full font-modern text-[10px] font-black uppercase tracking-widest hover:bg-white hover:text-navy transition-all duration-300 flex items-center gap-3 whitespace-nowrap group">
-                <Link
-                  href="https://www.instagram.com/s.u.n.d.a.y_podcast"
-                  target="_blank"
-                >
-                  Follow On IG
-                  <div className="group-hover:scale-110 transition-transform">
-                    <InstagramIcon />
-                  </div>
-                </Link>
-              </button>
+
+            <div className="flex flex-wrap gap-4">
+              <Link
+                href="https://www.youtube.com/@Sundaypodcast-k1s"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-pink text-navy px-10 py-4 rounded-full font-bold text-[10px] uppercase tracking-widest hover:bg-emerald-400 transition-all duration-300 flex items-center justify-center gap-3 whitespace-nowrap group shrink-0"
+              >
+                <span>Subscribe on YT</span>
+                <div className="group-hover:scale-110 transition-transform">
+                  <YoutubeIcon />
+                </div>
+              </Link>
+
+              <Link
+                href="https://open.spotify.com/show/4Qsn1AA1gmHGgbJjQR3vun?si=60d890b991ee4acf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border-2 border-white/20 text-white px-10 py-4 rounded-full font-bold text-[10px] uppercase tracking-widest hover:bg-white hover:text-navy transition-all duration-300 flex items-center justify-center gap-3 whitespace-nowrap group shrink-0"
+              >
+                <span>Listen On Spotify</span>
+                <div className="group-hover:scale-110 transition-transform">
+                  <SpotifyIcon />
+                </div>
+              </Link>
             </div>
           </div>
           <div className="absolute top-0 right-0 p-12 opacity-5 pointer-events-none">
