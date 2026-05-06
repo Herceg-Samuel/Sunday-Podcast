@@ -3,6 +3,7 @@ import "./globals.css";
 import { Archivo_Black, Fraunces, Syne, Inter } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { Analytics } from "@vercel/analytics/next";
 
 const archivo = Archivo_Black({
   weight: "400",
@@ -48,6 +49,7 @@ export default function RootLayout({
         {children}
         <Footer />
       </body>
+      <Analytics />
     </html>
   );
 }
